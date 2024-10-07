@@ -5,12 +5,10 @@ from sklearn.metrics import accuracy_score,confusion_matrix,classification_repor
 
 
 def train_logistic_model(x,y):
-    x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=42)
+    
 
     model = LogisticRegression()
-    model.fit(x_train,y_train)
+    model.fit(x,y)
 
-    y_pred = model.predict(x_test)
-
-    accuracy = accuracy_score(y_test,y_pred)
-    return accuracy
+    
+    return model

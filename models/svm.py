@@ -10,7 +10,5 @@ def train_svm_model(x,y):
     model = SVC(kernel='linear', random_state=42)
     model.fit(x_train,y_train)
 
-    y_pred = model.predict(x_test)
-
-    accuracy = accuracy_score(y_test,y_pred)
-    return accuracy
+    
+    return model

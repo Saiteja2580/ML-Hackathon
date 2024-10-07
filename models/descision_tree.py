@@ -10,7 +10,6 @@ def train_decision_tree_model(x,y):
     model = DecisionTreeClassifier(random_state=42)
     model.fit(x_train,y_train)
 
-    y_pred = model.predict(x_test)
+    
+    return model
 
-    accuracy = accuracy_score(y_test,y_pred)
-    return accuracy
